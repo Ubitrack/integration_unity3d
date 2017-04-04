@@ -8,6 +8,7 @@ public class UbitrackSingleVSTCamera : MonoBehaviour {
     public Transform eyeOffset;
 
     public Texture CameraImage;
+   
     
     public Material ARMaterial;
     public string ARMaterialTexName = "_MainTex";
