@@ -15,6 +15,7 @@ namespace FAR{
 		
 		public Material imageToMaterial;
 		public GUITexture imageToGuiTexture;
+        public UbitrackSingleVSTCamera VSTCamera; 
 	
 	    
 	    protected UnityImageReceiver m_imageReciever = null;
@@ -30,7 +31,8 @@ namespace FAR{
 					throw new Exception("Pull not implemented yet");				
 				}
 			case UbitrackEventType.Push:{
-					m_imageReciever = new UnityImageReceiver(imageToGuiTexture, imageToMaterial, flipVertical, flipHorizontal);
+                
+                m_imageReciever = new UnityImageReceiver(imageToGuiTexture, imageToMaterial, flipVertical, flipHorizontal);
 	
 	
 	            
@@ -63,6 +65,8 @@ namespace FAR{
 			case UbitrackEventType.Push:{
 	            
 	            m_imageReciever.newImageDataAvailable();
+                if( VSTCamera  != null)
+                    VSTCamera.CameraImage = m_imageReciever.m_texture;
 	            // nothing to to when new data is already pushed into the texture
 	        	break;
 				}

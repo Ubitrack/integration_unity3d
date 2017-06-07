@@ -108,7 +108,9 @@ namespace FAR{
 				}
 				
 				m_lastData = m_pose;
-			}
+
+                triggerPull(m_pose.time());
+               }
 			
 			
 			if(m_lastData != null) {		
