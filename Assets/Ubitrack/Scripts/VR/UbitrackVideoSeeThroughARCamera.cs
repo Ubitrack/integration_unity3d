@@ -33,16 +33,6 @@ public class UbitrackVideoSeeThroughARCamera : MonoBehaviour {
 
 
         
-
-
-        
-      
-
-        
-        
-
-        
-        
     }
 
     //void OnPreRender()
